@@ -1,0 +1,244 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:monospace;
+	font-style:monospace;
+	font-size:100%;
+	font-family:monospace;
+	vertical-align:baseline;
+}
+
+body {
+	line-height:1;
+	color:black;
+	background:white;
+}
+header {
+	text-align: center;
+	font-size: 150%;
+}
+footer {
+	text-align: center;
+}
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+caption, th, td {
+	text-align:left;
+	font-weight:normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:"";
+}
+blockquote, q {
+	quotes:"" "";
+}
+/* HTML5 tags */
+header, section, footer,
+aside, nav, article, figure {
+	display: block;
+}
+
+/*===================*/
+/*=== Main Styles ===*/
+/*===================*/
+body {
+	font:14px/1.6 Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	color:#333;
+	background:#eee;
+}
+body img {
+	height: 550px;
+	width: 450px;
+}
+
+a, a:visited {
+	color:blue;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#000;
+	text-decoration:none;
+}
+
+#dev7link {
+    position:absolute;
+    top:0;
+    left:50px;
+    background:url(images/dev7logo.png) no-repeat;
+    width:60px;
+    height:67px;
+    border:0;
+    display:block;
+    text-indent:-9999px;
+}
+
+.slider-wrapper { 
+	width: 80%; 
+	margin: 100px auto;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: black; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(rgb(86, 48, 223) rgb(228, 15, 86)); /*Safari 5.1-6*/
+	background: -o-linear-gradient(rgb(86, 48, 223), rgb(228, 15, 86)); /*Opera 11.1-12*/
+	background: -moz-linear-gradient(rgb(86, 48, 223), rgb(228, 15, 86)); /*Fx 3.6-15*/
+	background: linear-gradient(rgb(86, 48, 223), rgb(228, 15, 86)); /*Standard*/
+}
+
+body {
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	margin: 0 auto;
+	max-width: 960px;
+	width: 100%;
+	background-color: #89cff0;
+	border: 3px solid #bf00ff;
+	border-radius: 75px;
+	box-shadow: 3px 10px 35px #bf00ff, -3px -10px 35px #bf00ff;
+}
+
+/* the styles for links */
+a:link {
+	text-decoration: none;
+}
+a:focus, a:hover {
+	text-decoration: underline;
+}
+
+header {
+	vertical-align: middle;
+	padding: 20px 1.5em 40px;
+	font-size: 150%;
+	color: #bf00ff;
+	background-color: #89cff0;
+	border-radius: 75px 75px 0 0;
+	border-bottom: 3px solid hotpink;
+}
+header h1 {
+	padding: 10px 0 0;
+	font-size: 150%;
+}
+header img {
+	float: left;
+	padding-right: 1em;
+}
+
+section div {
+	font-size: 99%;
+}
+#wrapper, #slider {
+	border-radius: 25px;
+}
+.slider-wrapper, .theme-bar {
+	border-radius: 25px;
+	box-shadow: 10px 10px 25px #000033;
+}
+#slider img {
+	max-width: 800px;
+	width: 100%;
+	border-radius: 25px;
+}
+
+footer p {
+	clear: both;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 30px 1.5em;
+	font-size: 80%;
+	color: #bf00ff;
+	background-color: #29515a;
+	border-radius: 0 0 75px 75px;
+
+}
+
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+
+	html { 
+		background-color: #3b3f47;
+		background: none;
+	}
+
+	body {
+		width: 100%;
+		border: none;
+		border-radius: 0;
+		font-size: 80%;
+		box-shadow: none;
+	}
+
+	header { 
+		text-align: center;
+		border-radius: 0; 
+		background-color: #3b3f47;
+		border-bottom: solid silver 1px;
+	}
+
+
+	header img { float: none; }
+	header h1 { font-size: 100%; }
+
+	header { text-align: center; }
+
+	section {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+	#wrapper, #slider, .slider-wrapper, .theme-bar {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		box-shadow: none;
+		border-radius: 0;
+
+	}
+	#slider img {
+		width: 100%;
+		border-radius: 0;
+	}
+	footer p { border-radius: 0; }
+
+}
+
+
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 80%; }
+}	
